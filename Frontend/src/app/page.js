@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -7,35 +9,6 @@ export default function Home() {
         <title>Budhshiv | Home</title>
         <meta name="description" content="Discover unique handcrafted brass products and artifacts." />
       </Head>
-      {/* Header */}
-      <header className="bg-gray-900 text-white py-4 shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto flex justify-between items-center px-6">
-          <a href="/" className="text-3xl font-bold tracking-wide">
-            Budhshiv
-          </a>
-          <nav>
-            <ul className="flex space-x-8">
-              <li>
-                <a href="#about" className="hover:text-blue-500 transition">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/products" className="hover:text-blue-500 transition">
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-blue-500 transition">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero Section */}
       <main
         className="relative h-[90vh] bg-cover bg-center"
         style={{
@@ -50,12 +23,12 @@ export default function Home() {
           <p className="text-lg md:text-xl max-w-3xl mb-8">
             Experience the finest craftsmanship with our exclusive range of brass statues, lamps, and decor pieces.
           </p>
-          <a
+          <Link
             href="/products"
             className="inline-block px-3 py-3 text-lg  font-bold bg-transparent hover:bg-blue-500 rounded-3xl border-[2px] border-white shadow-lg transition"
           >
             Explore Our Collection
-          </a>
+          </Link>
         </div>
       </main>
 
@@ -70,13 +43,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-gray-400 py-6">
-        <div className="container mx-auto px-6 text-center">
-          <p>© 2024 Budhshiv. All rights reserved.</p>
-        </div>
-      </footer>
     </>
   );
 }
